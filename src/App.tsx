@@ -29,6 +29,8 @@ function App() {
   return (
     <>
       <div className="container" data-bs-theme="light">
+      <h1 className="text-center">HISP DYNAMIC TABLE</h1>
+
         <div className="table-responsive">
           <table className="table table-bordered border-dark">
             <thead>
@@ -73,7 +75,6 @@ function App() {
           </table>
         </div>
       </div>
-      <h1>Hello Brian</h1>
     </>
   );
 }
