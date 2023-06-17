@@ -34,7 +34,7 @@ function App() {
     const periodsWithData = uniquePeriods.map((period) => {
       const dataForPeriod = dataInObjectForm
         .filter((obj) => obj["Period"] === period)
-        .map((obj) => obj["Data"]);
+        
   
       return { period, data: dataForPeriod };
     });
@@ -77,7 +77,7 @@ function App() {
                   <th>{data.period}</th>
                   {organizationalUnits.map((unit) =>
                     subColumns.map((subCol, subColIndex) => {
-                      const filteredData = dataInObjectForm.filter(
+                      const filteredData = data.data.filter(
                         (item) =>
                           item["Organisation unit"] === unit &&
                           item["Data"] === subCol
