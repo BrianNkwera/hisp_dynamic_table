@@ -1,5 +1,5 @@
 #image
-![HISP screenshot](https://github.com/BrianNkwera/hisp_dynamic_table/assets/83135377/727e4a60-6884-4e1f-b226-0dc988a3d584)
+![HISP correct table](https://github.com/BrianNkwera/hisp_dynamic_table/assets/83135377/4d7eb11a-8037-45ff-8a99-7e521db4f2e7)
 
 
 # Installation
