@@ -28,7 +28,6 @@ function App() {
 
   return (
     <>
-      {console.log(subColumns)}
       <div className="container" data-bs-theme="light">
         <div className="table-responsive">
           <table className="table table-bordered border-dark">
@@ -74,7 +73,6 @@ function App() {
           </table>
         </div>
       </div>
-      {console.log(dataInObjectForm)}
       <h1>Hello Brian</h1>
     </>
   );
