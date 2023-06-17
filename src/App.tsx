@@ -26,10 +26,30 @@ function App() {
     []
   );
 
+  const getUniquePeriods = () => {
+    const uniquePeriods = Array.from(
+      new Set(dataInObjectForm.map((obj) => obj["Period"]))
+    );
+  
+    const periodsWithData = uniquePeriods.map((period) => {
+      const dataForPeriod = dataInObjectForm
+        .filter((obj) => obj["Period"] === period)
+        .map((obj) => obj["Data"]);
+  
+      return { period, data: dataForPeriod };
+    });
+  
+    return periodsWithData;
+  };
+
+  const uniquePeriods = getUniquePeriods()
+
   return (
     <>
-      <div className="container" data-bs-theme="light">
-      <h1 className="text-center">HISP DYNAMIC TABLE</h1>
+      {console.log(uniquePeriods)}
+
+      <div className="container py-5" data-bs-theme="light">
+        <h1 className="text-center">HISP DYNAMIC TABLE</h1>
 
         <div className="table-responsive">
           <table className="table table-bordered border-dark">
@@ -52,9 +72,9 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {dataInObjectForm.map((data, dataIndex) => (
+              {uniquePeriods.map((data, dataIndex) => (
                 <tr key={`row-${dataIndex}`}>
-                  <th>{data.Period}</th>
+                  <th>{data.period}</th>
                   {organizationalUnits.map((unit) =>
                     subColumns.map((subCol, subColIndex) => {
                       const filteredData = dataInObjectForm.filter(
